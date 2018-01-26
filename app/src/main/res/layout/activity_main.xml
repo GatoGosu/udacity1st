@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+1st Project Task for Google Developer Challenge Scholarship: Android Basics @ Udacity
+
+Notes:
+1. Two fonts used from Google fonts. https://stackoverflow.com/questions/27588965/how-to-use-custom-font-in-android-studio
+2. I am not yet aware how to create custom design buttons, so button is static raster image.
+3. Not yet sure how to handle raster assets, background is downscaled 50% of xxx-hdpi size
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lt.lama.helloandroid.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/pressstart2p"
+        android:lineSpacingExtra="12sp"
+        android:text="UNLOCK\nNEW SKILLS"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="26sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="32dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/illustration"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/copyright_text"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/btn"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="66dp"
+        />
+
+    <TextView
+        android:id="@+id/copyright_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_regular"
+        android:textAlignment="center"
+        android:textColor="#fee0eb"
+        android:textSize="10sp"
+        android:alpha="0.5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="All rights reserved.  © 2011–2018 Udacity, Inc.
+\n 2465 Latham St, Mountain View, CA 94043  //  650-555-5555"
+        />
+</RelativeLayout>
